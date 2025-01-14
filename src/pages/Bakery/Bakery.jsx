@@ -16,15 +16,11 @@ const bakeryProducts = [
   },
 ];
 
-export default function Bakery() {
-
-  const addToCart = (product) => {
-    console.log(`${product.title} added to the cart.`);
-  };
-  
+export default function Bakery({addToCart, cart}) {
+ 
   return (
     <main className="main-container">
-      <Header />
+      <Header cart={cart} />
       <div className="menu">
         <MenuBar />
       </div>
@@ -34,13 +30,10 @@ export default function Bakery() {
           {bakeryProducts.map((product) => (
             <div key={product.id} className="product-item">
               <ProductCard
-                title={product.title}
-                price={product.price}
-                image={product.image}
+                product = {product}
+                addToCart={addToCart}
               />
-              <button className="add-to-cart-btn" onClick={() => addToCart(product)}>
-                Add to Cart
-              </button>
+              
             </div>
           ))}
         </div>

@@ -12,8 +12,8 @@ const navigationItems = [
   },
 ];
 
-export default function Header() {
-  const cartCount = 0;  // Example, you can replace it with dynamic count
+export default function Header({cart}) {
+  const cartCount = cart.length;  // Example, you can replace it with dynamic count
 
   return (
     <header className="header">
@@ -46,8 +46,7 @@ export default function Header() {
               className="icon"
               alt="Cart Icon"
             />
-            <div className="badge">1</div>
-            {/* {cartCount > 0 && <div className="badge">{cartCount}</div>} */}
+             {cartCount > 0 && <div className="badge">{cartCount}</div>} 
           </div>
           <div className="label">{navigationItems[0].label}</div>
         </div>
