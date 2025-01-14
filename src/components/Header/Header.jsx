@@ -1,5 +1,4 @@
 import React from "react";
-import NavBar from "../NavBar/NavBar";
 import "./Header.css";
 
 const navigationItems = [
@@ -14,6 +13,8 @@ const navigationItems = [
 ];
 
 export default function Header() {
+  const cartCount = 0;  // Example, you can replace it with dynamic count
+
   return (
     <header className="header">
       <div className="logo-container">
@@ -37,11 +38,31 @@ export default function Header() {
         </div>
       </div>
       <nav className="navigation-container">
-        {navigationItems.map((item, index) => (
-          <NavBar key={index} icon={item.icon} label={item.label} />
-        ))}
+        <div className="navItem">
+          <div className="icon-container">
+            <img
+              loading="lazy"
+              src={navigationItems[0].icon}
+              className="icon"
+              alt="Cart Icon"
+            />
+            <div className="badge">1</div>
+            {/* {cartCount > 0 && <div className="badge">{cartCount}</div>} */}
+          </div>
+          <div className="label">{navigationItems[0].label}</div>
+        </div>
+        <div className="navItem">
+          <div className="icon-container">
+            <img
+              loading="lazy"
+              src={navigationItems[1].icon}
+              className="icon"
+              alt="Orders Icon"
+            />
+          </div>
+          <div className="label">{navigationItems[1].label}</div>
+        </div>
       </nav>
     </header>
   );
 }
-  
