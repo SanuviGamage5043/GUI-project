@@ -3,7 +3,7 @@ import './Gallery.css';
 
 export default function Gallery() {
   return (
-    <main className='container'>
+    <main className='gallery-container'>
     <div className="main">
       <div className="listpic1">
       <ul>

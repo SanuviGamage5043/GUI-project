@@ -23,7 +23,14 @@
   border-bottom-width: 1px;
   border-right-width: 1px;
   padding: 18px 20px;
+
+
   
+.listcomp-link{
+    text-decoration: none;
+    color: black;
+    transition: color 0.3s;
+  }
   
   
 }

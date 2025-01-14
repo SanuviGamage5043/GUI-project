@@ -7,8 +7,7 @@ export default function Home2() {
     <div>
       <Header/>
       <MenuBar/>
-      
-       {/* <Gallery/>  */}
+       <Gallery/>  
     </div>
   );
 }
