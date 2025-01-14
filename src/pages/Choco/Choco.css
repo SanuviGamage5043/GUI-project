@@ -1,0 +1,29 @@
+.main-container {
+  background-color: rgb(211, 154, 198);
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 22px 68px 66px 24px;
+}
+
+.products-section {
+  margin-top: 40px;
+}
+
+.section-title {
+  font: 700 36px "Trebuchet MS", sans-serif;
+  margin: 0 0 20px;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(208px, 1fr));
+  gap: 20px;
+}
+
+@media (max-width: 991px) {
+  .main-container {
+    padding: 20px;
+  }
+}

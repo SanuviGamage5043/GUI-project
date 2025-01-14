@@ -1,0 +1,39 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  align-items: center;
+  padding: 50px;
+  background-image: url("D:/3rd sem/EC3404 GUI/final gui project/new app/gui1-app/images/wall.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.content {
+  display: flex;
+  align-self: flex-start;
+  align-content: space-between;
+  width: 100%;
+}
+
+.title {
+  color: rgba(0, 0, 0, 1);
+  font-size: 60px;
+  font-weight: 400;
+  align-self: center;
+  align-items: center;
+  margin-top: 95px;
+  font-family: Times New Roman, -apple-system, Roboto, Helvetica, sans-serif;
+}
+
+@media (max-width: 991px) {
+  .container {
+    padding: 0 20px 100px;
+  }
+  .content {
+    max-width: 100%;
+  }
+  .title {
+    margin-top: 40px;
+  }
+}

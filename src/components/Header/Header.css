@@ -1,0 +1,82 @@
+/* General Header Styles */
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 20px 40px;
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #ddd;
+  gap: 20px;
+}
+
+/* Logo Section */
+.logo-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.brand-name {
+  font-family: "Times New Roman", serif;
+  font-weight: bold;
+  font-size: 36px;
+  color: #343a40;
+  margin: 0;
+}
+
+.tagline {
+  font-size: 16px;
+  color: #6c757d;
+  margin: 0;
+}
+
+/* Search Section */
+.search-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-grow: 1;
+  max-width: 600px;
+}
+
+.search-input {
+  flex: 1;
+  width: 1000px;
+  padding: 10px 15px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.search-input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.search-icon {
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+}
+
+/* Navigation Section */
+.navigation-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #495057;
+}
+
+.navigation-container a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s ease;
+}
+
+.navigation-container a:hover {
+  color: #007bff;
+}

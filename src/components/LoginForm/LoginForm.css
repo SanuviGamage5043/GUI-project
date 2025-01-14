@@ -1,0 +1,94 @@
+.formContainer {
+  border-radius: 8px;
+  background-color: rgb(255, 252, 255);
+  display: flex;
+  min-width: 320px;
+  margin-top: 67px;
+  min-height: 597px;
+  width: 535px;
+  max-width: 100%;
+  flex-direction: column;
+  padding: 24px;
+  border: 1px solid rgba(217, 217, 217, 1);
+}
+
+.inputGroup {
+  display: flex;
+  width: 90%;
+  flex-direction: column;
+  margin-bottom: 24px;
+}
+
+.label {
+  color: black;
+  font-size: 32px;
+}
+
+.input {
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 1);
+  margin-top: 8px;
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid rgba(217, 217, 217, 1);
+  font-size: 20px;
+}
+
+.forgotPassword {
+  text-decoration: underline;
+  width: 50%;
+  height: 50px;
+  padding: auto;
+  margin-top: 50px;
+  align-self: center;
+  cursor: pointer;
+  border: none;
+  font-size: 15px;
+}
+
+.submitButton {
+  border-radius: 10px;
+  background-color: var(--Colors-Blue, #007aff);
+  align-self: center;
+  color: #fff;
+  padding: 12px;
+  width: 140px;
+  height: 50px;
+  text-align: center;
+  margin-top: 50px;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.signupPrompt {
+  text-align: center;
+  color: black;
+  margin-top: 40px;
+  font: 400 40px Times New Roman, -apple-system, Roboto, Helvetica, sans-serif;
+}
+
+.signupLink {
+  border-radius: 10px;
+  background-color: var(--Colors-Blue, #007aff);
+  align-self: center;
+  color: #fff;
+  padding: 12px;
+  width: 140px;
+  text-align: center;
+  margin-top: 50px;
+  border: none;
+  cursor: pointer;
+  height: 50px;
+  font-size: 20px;
+}
+
+@media (max-width: 991px) {
+  .formContainer {
+    margin-top: 40px;
+    padding: 20px;
+  }
+  .signupPrompt {
+    margin-top: 40px;
+  }
+}

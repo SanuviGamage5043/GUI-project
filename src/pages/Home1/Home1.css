@@ -1,0 +1,23 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centers content vertically */
+  align-items: center;    /* Centers content horizontally */
+  width: 100%;
+  height: 100vh; /* Makes the container take up the full viewport height */
+  padding: 50px;
+  background-image: url("D:/3rd sem/EC3404 GUI/final gui project/new app/gui1-app/images/wall.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+.title {
+  color: rgba(0, 0, 0, 1);
+  font-size: 60px;
+  font-weight: 400;
+  text-align: center;
+  margin-top: 0; /* Removes extra margin */
+  font-family: "Times New Roman", -apple-system, Roboto, Helvetica, sans-serif;
+}

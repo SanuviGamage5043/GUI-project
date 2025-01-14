@@ -1,0 +1,44 @@
+import React from "react";
+import Header from "./components/Header/Header";
+import MenuBar from "./components/MenuBar/MenuBar";
+import ProductCard from "./components/ProductCard/ProductCard";
+import './Flowers.css'; 
+
+const flowerProducts = [
+  {
+    id: 1,
+    image: 'https://cdn.builder.io/api/v1/image/assets/TEMP/bc2b22eb531762798998de022e8bf5c82a95901905cb2566af75b6413b0898d7?placeholderIfAbsent=true&apiKey=dab43acfe9e64948b6d46280c551ed17',
+    title: 'Red Roses',
+    price: 5000.00,
+  },
+  {
+    id: 2,
+    image: 'https://cdn.builder.io/api/v1/image/assets/TEMP/41ac9e780c1a4ba8950826345b9d1fe84dc805234eeb7008ea5d1706051ac484?placeholderIfAbsent=true&apiKey=dab43acfe9e64948b6d46280c551ed17',
+    title: 'Classic Budding Roses',
+    price: 4500.00,
+  },
+  // ... rest of products data
+];
+
+export default function Flowers() {
+  return (
+    <main className="mainContainer">
+      <Header />
+      <MenuBar />
+      <section className="productsSection">
+        <h2 className="sectionTitle">Flowers</h2>
+        <div className="productsGrid">
+          {flowerProducts.map((product) => (
+             <ProductCard
+             key={product.id}
+             title={product.title}
+             price={product.price}
+             image={product.image}
+             onAddToCart={() => console.log(`Added ${product.title} to cart`)}
+           />
+          ))}
+        </div>
+      </section>
+    </main>
+  );
+}
