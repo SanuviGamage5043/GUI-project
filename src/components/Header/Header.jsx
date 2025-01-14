@@ -1,5 +1,6 @@
 import React from "react";
 import "./Header.css";
+import { useNavigate } from "react-router-dom";
 
 const navigationItems = [
   {
@@ -13,6 +14,8 @@ const navigationItems = [
 ];
 
 export default function Header({cart}) {
+    const navigate = useNavigate();
+  
   const cartCount = cart.length;  // Example, you can replace it with dynamic count
 
   return (
@@ -38,8 +41,8 @@ export default function Header({cart}) {
         </div>
       </div>
       <nav className="navigation-container">
-        <div className="navItem">
-          <div className="icon-container">
+        <div className="navItem" onClick={()=> navigate("/cart")}>
+          <div className="icon-container" >
             <img
               loading="lazy"
               src={navigationItems[0].icon}

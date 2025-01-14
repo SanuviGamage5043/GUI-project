@@ -10,9 +10,26 @@ const bakeryProducts = [
   {
     id: 1,
     title: "Chocolate Birthday Cake",
-    price: 5000.0,
+    price: 5000.00,
     image:
       "https://cdn.builder.io/api/v1/image/assets/TEMP/f33d133b202070637493eaf03995b7ffbc93857e3f0e00d4d26ba2c970f66479?placeholderIfAbsent=true&apiKey=dab43acfe9e64948b6d46280c551ed17",
+    quantity:1
+  },
+
+  {
+    id: 2,
+    image: "https://cdn.builder.io/api/v1/image/assets/TEMP/340bc6f84bac139148265612c8a16031383b49c1e3b90e39af7bc7e8bf525bdf?placeholderIfAbsent=true&apiKey=dab43acfe9e64948b6d46280c551ed17",
+    title: "Lava cakes",
+    price: 1000.00,
+    quantity:1
+  },
+
+  {
+    id: 3,
+    image: "https://cdn.builder.io/api/v1/image/assets/TEMP/fca4380854f1c6a6bc8a46b646a61ca5797c50631f732eb0df27ad70b6b85d2d?placeholderIfAbsent=true&apiKey=dab43acfe9e64948b6d46280c551ed17",
+    title: "Muffins",
+    price: 500.00,
+    quantity:1
   },
 ];
 

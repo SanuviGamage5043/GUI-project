@@ -23,7 +23,7 @@ export default function LoginForm() {
 
   const SignIn = () => {
     navigate("/home2");
-  };
+  }
 
   return (
     <form className="formContainer" onSubmit={handleSubmit}>
@@ -63,7 +63,7 @@ export default function LoginForm() {
       >
         Forgot password?
       </button>
-      <button type="submit" className="submitButton">
+      <button type="submit" className="submitButton" onClick={SignIn}>
         Sign In
       </button>
       <div className="signupPrompt">Don't have an account?</div>
