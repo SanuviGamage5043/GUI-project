@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-// import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import './Cart.css';
 
 const Cart = ({cart, addToCart, getCartCount}) => {
 
-  // const navigate = useNavigate();
+const navigate = useNavigate();
 
   const [cartItems, setCartItems] = useState(cart);
 
@@ -32,9 +32,9 @@ const Cart = ({cart, addToCart, getCartCount}) => {
     return cartItems.reduce((total, item) => total + item.price * item.quantity, 0).toFixed(2);
   };
 
-  // const Back = () => {
-  //   navigate("/home2");
-  // };
+  const Back = () => {
+    navigate("/home2");
+  };
 
   return (
     <div className="cart-container">
@@ -70,7 +70,7 @@ const Cart = ({cart, addToCart, getCartCount}) => {
         <div className="total-amount">
           <p>Total: Rs.{calculateTotal()}</p>
         </div>
-        <button className="back-button" >Back</button>
+        <button className="back-button" onClick={Back} >Back</button>
         <button className="buy-now-button">Buy Now</button>
       </div>
     </div>

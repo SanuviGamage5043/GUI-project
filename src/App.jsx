@@ -3,8 +3,10 @@ import Home1 from "./pages/home1/home1";
 import Home2 from "./pages/Home2/Home2";
 import SignUp from "./pages/SignUp/SignUp";
 import Bakery from "./pages/Bakery/Bakery"
+import Choco from "./pages/Choco/Choco";
 import { useState } from "react";
 import Cart from "./pages/Cart/Cart";
+
 
 
 export default function App() {
@@ -35,7 +37,7 @@ export default function App() {
         <Route path="/home2" element={<Home2/>}/>
         <Route path="/bakery" element = {<Bakery addToCart={addToCart} cart={cart}/>}/>
         <Route path="/cart" element = {<Cart cart={cart} addToCart={addToCart} removeFromCart={removeFromCart} getCartCount={getCartCount}/>}/>
-        
+        <Route path="/choco" element = {<Choco addToCart={addToCart} cart={cart}/>}/>
       </Routes>
     </BrowserRouter>
   );

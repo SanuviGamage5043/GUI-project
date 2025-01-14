@@ -21,28 +21,27 @@
 .productTitle {
   font: 700 20px Times New Roman, -apple-system, Roboto, Helvetica, sans-serif;
   margin: 0;
+  position: relative;
 }
 
 .productPrice {
   font: 700 18px Times New Roman, -apple-system, Roboto, Helvetica, sans-serif;
   color: rgba(34, 61, 235, 1);
   margin: 4px 0;
+  position: relative;
 }
 
-.addToCartButton {
+
+
+.addtocartbutton {
   border-radius: var(--sds-size-radius-200);
   border: var(--sds-size-stroke-border) solid var(--Grays-Gray-6, #f2f2f7);
-  background: var(--Colors-Blue, #007aff);
+  background: var(--Colors-Blue, #164fdc);
   color: var(--sds-color-text-danger-on-danger);
   padding: 12px;
   width: 116px;
   font: 500 16px Roboto, sans-serif;
   letter-spacing: 0.15px;
   cursor: pointer;
-}
-
-@media (max-width: 991px) {
-  .productCard {
-    max-width: 100%;
-  }
+  position: relative;
 }

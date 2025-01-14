@@ -1,5 +1,4 @@
 import React from "react";
-
 import "./ProductCard.css";
 
 export default function ProductCard({ product, addToCart}) {
@@ -12,7 +11,7 @@ export default function ProductCard({ product, addToCart}) {
         <h3 className="productTitle">{product.title}</h3>
         <p className="productPrice">Rs {product.price.toFixed(2)}</p>
       </div>
-      <button className="add-to-cart-btn" onClick={() => addToCart(product)}>
+      <button className="addtocartbutton" onClick={() => addToCart(product)}>
                 Add to Cart
               </button>
     </article>
