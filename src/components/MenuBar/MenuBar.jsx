@@ -10,7 +10,9 @@ export default function MenuBar() {
         <li className="listcomp">
         <Link className="listcomp-link" to="/flowers"> Flowers</Link>
         </li>
-        <li className="listcomp">Gift Baksets & Boxes</li>
+        <li className="listcomp">
+        <Link className="listcomp-link" to="/giftbox"> Gift Baksets & Boxes</Link>
+        </li>
         <li className="listcomp">
           <Link className="listcomp-link" to="/choco"> Chocolate</Link>
         </li>
