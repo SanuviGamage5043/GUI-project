@@ -13,6 +13,8 @@ export default function Home2( cart ) {
       <img src="/images/heading.png" className="heading-image"/>
       
       <h1 className="quote"> A gift is a token of love, a memory to treasure forever</h1>
+
+      <img src="/images/gift.png"  className="gift-image"/>
       
       <img src="/images/voucher.png" className="voucher-item"/>
       
