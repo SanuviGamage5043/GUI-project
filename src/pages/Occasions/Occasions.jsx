@@ -32,6 +32,14 @@ const weddingProducts = [
     price: 4500.0,
     quantity: 1,
   },
+  {
+    id:5,
+    image: "https://cdn.builder.io/api/v1/image/assets/TEMP/f923216d0ce0fa6021f53e009c189cea605aaccc218fa1fd3c337c0623c3800e?placeholderIfAbsent=true&apiKey=dab43acfe9e64948b6d46280c551ed17",
+    title: "Birthday Red Wine box",
+    price: 15000.00,
+    quantity:1,
+   
+  },
 ];
 
 export default function Occasions({ addToCart, cart }) {
