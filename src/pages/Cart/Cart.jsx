@@ -72,7 +72,7 @@ const handleBuyNow = () => {
           ))}
         </div>
       ) : (
-        <p>Your cart is empty.</p>
+        <p className="para">Your cart is empty.</p>
       )}
 
       {/* Total and Action Buttons */}

@@ -2,12 +2,15 @@
 
 /* General Cart Styles */
 .cart-container {
+  display: flex;
+  flex-direction: column;
+  background-color: #f2a7e6;
   padding: 20px;
-  background-color: #f8f9fa;
+  min-height: 100vh;
 }
 
 h2 {
-  font-size: 28px;
+  font-size: 48px;
   font-weight: bold;
   margin-bottom: 20px;
 }
@@ -42,13 +45,13 @@ h2 {
 }
 
 .item-title {
-  font-size: 18px;
+  font-size: 24px;
   font-weight: 600;
 }
 
 .item-price {
-  font-size: 16px;
-  color: #28a745;
+  font-size: 20px;
+  color:blue;
 }
 
 /* Quantity Button Styles */
@@ -59,7 +62,7 @@ h2 {
 }
 
 .item-quantity button {
-  font-size: 18px;
+  font-size: 20px;
   padding: 5px 10px;
   background-color: #007bff;
   color: #ffffff;
@@ -94,12 +97,12 @@ h2 {
 }
 
 .total-amount {
-  font-size: 20px;
+  font-size: 28px;
   font-weight: bold;
   color: #343a40;
 }
 
-.back-button,
+
 .buy-now-button {
   padding: 10px 20px;
   font-size: 16px;
@@ -118,13 +121,32 @@ h2 {
 
 .buy-now-button {
   background-color: #007bff;
+  width: 200px;
+  height: 60px;
+  font-size: 28px;
+  color: black;
 }
 
 .buy-now-button:hover {
   background-color: #0056b3;
+
 }
 
 .trashbin {
   width: 35px;
   height: 35px;
+}
+
+.para {
+  font-size: 28px;
+}
+
+.back-button {
+
+  width: 150px;
+  height: 60px;
+  background-color: #28a745;
+  font-size: 28px;
+  border:#28a745 ;
+  color: black;
 }
