@@ -6,7 +6,9 @@ export default function MenuBar() {
   return (
     <div className="listtgroup">
       <ul className="list">
-        <li className="listcomp">Occasions</li>
+        <li className="listcomp">
+        <Link className="listcomp-link" to="/occasions"> Occasions</Link>
+        </li>
         <li className="listcomp">
         <Link className="listcomp-link" to="/flowers"> Flowers</Link>
         </li>
