@@ -1,47 +1,50 @@
 .productCard {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  gap: 12px;
-  width: 100%;
-  max-width: 208px;
+  margin: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 200px;
+ 
 }
 
 .productImage {
-  aspect-ratio: 0.96;
-  object-fit: contain;
   width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 10px;
 }
 
 .productInfo {
-  text-align: center;
-  width: 100%;
+  margin-bottom: 10px;
 }
 
 .productTitle {
-  font: 700 20px Times New Roman, -apple-system, Roboto, Helvetica, sans-serif;
-  margin: 0;
-  position: relative;
+  font-size: 18px;
+  font-weight: bold;
+  margin: 10px 0;
 }
 
 .productPrice {
-  font: 700 18px Times New Roman, -apple-system, Roboto, Helvetica, sans-serif;
-  color: rgba(34, 61, 235, 1);
-  margin: 4px 0;
-  position: relative;
+  font-size: 16px;
+  color: #333;
 }
 
-
-
 .addtocartbutton {
-  border-radius: var(--sds-size-radius-200);
-  border: var(--sds-size-stroke-border) solid var(--Grays-Gray-6, #f2f2f7);
-  background: var(--Colors-Blue, #164fdc);
-  color: var(--sds-color-text-danger-on-danger);
-  padding: 12px;
-  width: 116px;
-  font: 500 16px Roboto, sans-serif;
-  letter-spacing: 0.15px;
+  background-color: #0000ff;
+  color: #ffffff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
   cursor: pointer;
-  position: relative;
+  font-size: 14px;
+}
+
+.addtocartbutton:hover {
+  background-color: #0056b3;
 }

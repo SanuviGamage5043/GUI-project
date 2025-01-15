@@ -25,17 +25,18 @@ const flowerProducts = [
 
 export default function Flowers({addToCart, cart}) {
   return (
-    <main className="mainContainer">
+    <main className="main-container">
       <Header cart={cart}/>
       <MenuBar />
-      <section className="productsSection">
-        <h2 className="sectionTitle">Flowers</h2>
-        <div className="productsGrid">
+      <section className="products-section">
+        <h2 className="section-title">Flowers</h2>
+        <div className="products-grid">
           {flowerProducts.map((product) => (
-             <ProductCard
-             product = {product}
-             addToCart={addToCart}
-           />
+           <div key={product.id} className="product-item">
+                         <ProductCard 
+                             product={product} 
+                             addToCart={addToCart} />
+                       </div>
           ))}
         </div>
       </section>

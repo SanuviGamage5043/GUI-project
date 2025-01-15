@@ -36,12 +36,12 @@ const weddingProducts = [
 
 export default function Occasions({ addToCart, cart }) {
   return (
-    <main className="mainContainer">
+    <main className="main-container">
       <Header cart={cart} />
       <MenuBar />
-      <section className="productsSection">
-        <h2 className="sectionTitle">Birthday</h2>
-        <div className="productsGrid">
+      <section className="products-section">
+        <h2 className="section-title">Birthday</h2>
+        <div className="products-grid">
           {birthdayProducts.map((product) => (
             <div key={product.id} className="product-item">
               <ProductCard 
@@ -53,9 +53,9 @@ export default function Occasions({ addToCart, cart }) {
         </div>
       </section>
 
-      <section className="productsSection">
-        <h2 className="sectionTitle">Wedding</h2>
-        <div className="productsGrid">
+      <section className="products-section">
+        <h2 className="section-title">Wedding</h2>
+        <div className="products-grid">
           {weddingProducts.map((product) => (
             <div key={product.id} className="product-item">
               <ProductCard 

@@ -6,6 +6,16 @@ const Cart = ({cart, addToCart, getCartCount}) => {
 
 const navigate = useNavigate();
 
+const handleBuyNow = () => {
+   // Save cart items to orders
+  alert(
+    `You have purchased the following products:\n${cartItems
+      .map((item) => `${item.title} (x${item.quantity})`)
+      .join(", ")}`
+  );
+   // Clear the cart after purchase
+};
+
   const [cartItems, setCartItems] = useState(cart);
 
   // Function to handle quantity change
@@ -71,7 +81,7 @@ const navigate = useNavigate();
           <p>Total: Rs.{calculateTotal()}</p>
         </div>
         <button className="back-button" onClick={Back} >Back</button>
-        <button className="buy-now-button">Buy Now</button>
+        <button className="buy-now-button" onClick={handleBuyNow}>Buy Now</button>
       </div>
     </div>
   );

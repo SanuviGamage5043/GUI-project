@@ -25,12 +25,12 @@ const giftboxProducts = [
 
 export default function GiftBox({ addToCart, cart }) {
   return (
-    <main className="mainContainer">
+    <main className="main-container">
       <Header cart={cart} />
       <MenuBar />
-      <section className="productsSection">
-        <h2 className="sectionTitle">Gift Box</h2>
-        <div className="productsGrid">
+      <section className="products-section">
+        <h2 className="section-title">Gift Box</h2>
+        <div className="products-grid">
           {giftboxProducts.map((product) => (
             <div key={product.id} className="product-item">
               <ProductCard 

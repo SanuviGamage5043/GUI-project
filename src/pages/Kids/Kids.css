@@ -1,29 +1,41 @@
-.mainContainer {
-  background-color: rgba(255, 255, 255, 1);
-  position: relative;
+.main-container {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  padding: 22px 68px 66px 24px;
+  background-color: #f2a7e6;
+  padding: 20px;
+  min-height: 100vh;
+  
 }
 
-.productsSection {
-  margin-top: 40px;
+.menu {
+  margin-bottom: 20px;
 }
 
-.sectionTitle {
-  font: 700 36px Trebuchet MS, sans-serif;
-  margin: 0 0 20px;
+.products-section {
+  background:transparent; 
+  padding: 20px;
+  border-radius: 8px;
+  align-content: center;
 }
 
-.productsGrid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(208px, 1fr));
-  gap: 20px;
+.section-title {
+  font-size: 60px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  justify-self: left;
+  margin: 50px;
 }
 
-@media (max-width: 991px) {
-  .mainContainer {
-    padding: 20px;
-  }
+.products-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  column-gap: 40px; /* Adds horizontal spacing */
+  row-gap: 20px; /* Keeps the vertical spacing smaller */
+}
+
+
+.product-item {
+  flex: 1 1 calc(33.33% - 20px); /* Makes the items responsive */
+  max-width: 200px; /* Ensures each card has a fixed width */
 }

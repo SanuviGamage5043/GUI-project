@@ -33,12 +33,12 @@ const fruitsProducts = [
 
 export default function Fruits({ addToCart, cart }) {
   return (
-    <main className="mainContainer">
+    <main className="main-container">
       <Header cart={cart} />
       <MenuBar />
-      <section className="productsSection">
-        <h2 className="sectionTitle">Fruits</h2>
-        <div className="productsGrid">
+      <section className="products-section">
+        <h2 className="section-title">Fruits</h2>
+        <div className="products-grid">
           {fruitsProducts.map((product) => (
             <div key={product.id} className="product-item">
               <ProductCard 
