@@ -1,5 +1,56 @@
-.homedisplay{
+.main-container {
   display: flex;
   flex-direction: column;
+  background-color: #f2a7e6;
+  padding: 20px;
+  min-height: 100vh;
   
+}
+
+.heading1 {
+  font-family: "Goudy Bookletter 1911", sans-serif;
+  font-size: 65px;
+  width: 600px;
+  text-align: center;
+  color: rgb(147, 5, 41);
+  
+  
+
+
+}
+
+.imagewall {
+
+  width: 1000px;
+  height: 800px;
+  
+}
+.heading1main {
+ display: flex;
+ flex-direction: row;
+ justify-content: space-between;
+}
+
+.heading2 {
+  font-family:cursive;
+  justify-self: right;
+  font-size: 80px;
+  width: 800px;
+  text-align: center;
+  justify-content: right;
+  justify-items: right;
+  color: rgb(67, 8, 121)
+}
+
+.heading3 {
+
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 65px;
+  color: red;
+  width: 800px;
+  text-align: center;
+  margin-left: 300px;
+}
+.allheadings {
+   width: 1000px;
 }
