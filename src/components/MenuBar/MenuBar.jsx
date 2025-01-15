@@ -23,7 +23,9 @@ export default function MenuBar() {
           <Link className="listcomp-link" to="/bakery"> Bakery</Link>
         </li>
         <li className="listcomp">Kids</li>
-        <li className="listcomp">Home</li>
+        <li className="listcomp">
+        <Link className="listcomp-link" to="/home"> Home</Link>
+        </li>
       </ul>
     </div>
   );
