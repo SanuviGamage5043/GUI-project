@@ -8,6 +8,7 @@ import Flowers from "./pages/Flowers/Flowers";
 import Fruits from "./pages/Fruits/Fruits";
 import GiftBox from "./pages/GiftBox/GiftBox";
 import Home from "./pages/Home/Home";
+import Kids from "./pages/Kids/Kids";
 import { useState } from "react";
 import Cart from "./pages/Cart/Cart";
 
@@ -46,6 +47,7 @@ export default function App() {
         <Route path="/fruits" element = {<Fruits addToCart={addToCart} cart={cart}/>}/>
         <Route path="/giftbox" element = {<GiftBox addToCart={addToCart} cart={cart}/>}/>
         <Route path="/home" element = {<Home addToCart={addToCart} cart={cart}/>}/>
+        <Route path="/kids" element = {<Kids addToCart={addToCart} cart={cart}/>}/>
       </Routes>
     </BrowserRouter>
   );
