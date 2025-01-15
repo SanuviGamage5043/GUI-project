@@ -1,7 +1,7 @@
 import React from "react";
-import Header from "./components/Header/Header";
-import MenuBar from "./components/MenuBar/MenuBar";
-import ProductCard from "./components/ProductCard/ProductCard";
+import Header from "../../components/Header/Header";
+import MenuBar from "../../components/MenuBar/MenuBar";
+import ProductCard from "../../components/ProductCard/ProductCard";
 import './Flowers.css'; 
 
 const flowerProducts = [
@@ -20,21 +20,18 @@ const flowerProducts = [
   // ... rest of products data
 ];
 
-export default function Flowers() {
+export default function Flowers({addToCart, cart}) {
   return (
     <main className="mainContainer">
-      <Header />
+      <Header cart={cart}/>
       <MenuBar />
       <section className="productsSection">
         <h2 className="sectionTitle">Flowers</h2>
         <div className="productsGrid">
           {flowerProducts.map((product) => (
              <ProductCard
-             key={product.id}
-             title={product.title}
-             price={product.price}
-             image={product.image}
-             onAddToCart={() => console.log(`Added ${product.title} to cart`)}
+             product = {product}
+             addToCart={addToCart}
            />
           ))}
         </div>
