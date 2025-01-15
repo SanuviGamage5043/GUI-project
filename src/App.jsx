@@ -5,6 +5,7 @@ import SignUp from "./pages/SignUp/SignUp";
 import Bakery from "./pages/Bakery/Bakery"
 import Choco from "./pages/Choco/Choco";
 import Flowers from "./pages/Flowers/Flowers";
+import Fruits from "./pages/Fruits/Fruits";
 import { useState } from "react";
 import Cart from "./pages/Cart/Cart";
 
@@ -40,6 +41,7 @@ export default function App() {
         <Route path="/cart" element = {<Cart cart={cart} addToCart={addToCart} removeFromCart={removeFromCart} getCartCount={getCartCount}/>}/>
         <Route path="/choco" element = {<Choco addToCart={addToCart} cart={cart}/>}/>
         <Route path="/flowers" element = {<Flowers addToCart={addToCart} cart={cart}/>}/>
+        <Route path="/fruits" element = {<Fruits addToCart={addToCart} cart={cart}/>}/>
       </Routes>
     </BrowserRouter>
   );
