@@ -63,7 +63,7 @@ export default function LoginForm() {
       >
         Forgot password?
       </button>
-      <button type="submit" className="submitButton" onClick={SignIn}>
+      <button type="submit" className="submitButton" >
         Sign In
       </button>
       <div className="signupPrompt">Don't have an account?</div>
