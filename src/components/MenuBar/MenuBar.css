@@ -1,6 +1,7 @@
 .listgroup {
  
   width: 100%;
+ 
   display: flex;
   color: rgba(0, 0, 0, 1);
   text-align: center;
@@ -16,6 +17,8 @@
 .list{
   display: flex;
   justify-content: center;
+  justify-content: space-evenly;
+  background-color: rgb(233, 189, 233);
 }
 
 .listcomp {

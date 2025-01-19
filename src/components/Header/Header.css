@@ -7,6 +7,7 @@
   gap: 20px;
   flex-wrap: wrap;
   background: transparent;
+ 
   
 }
 
@@ -39,7 +40,7 @@
   align-items: center;
   gap: 10px;
   flex-grow: 1;
-  width: 800px;
+  width: 900px;
   margin-right: 60px;
   height: 60px;
   padding-left: 20px;
@@ -59,11 +60,12 @@
 .search-input:focus {
   border-color: #007bff;
   outline: none;
+  height: 60px;
 }
 
 .search-icon {
   height: 60px;
-  width: 50px;
+  width: 60px;
   cursor: pointer;
 }
 
