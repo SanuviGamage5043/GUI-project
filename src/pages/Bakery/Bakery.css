@@ -32,16 +32,19 @@
   margin: 50px;
 }
 
-.products-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: left;
-  column-gap: 40px; /* Adds horizontal spacing */
-  row-gap: 20px; /* Keeps the vertical spacing smaller */
-}
+
 
 
 .product-item {
-  flex: 1 1 calc(33.33% - 20px); /* Makes the items responsive */
-  max-width: 200px; /* Ensures each card has a fixed width */
+  display: inline-block; /* Ensures product cards are inline horizontally */
+  width: 300px; /* Adjust width as per your design */
+  margin: 10px; /* Add spacing between product cards */
+  vertical-align: top;
+  
+}
+
+.allproducts {
+  display: grid;
+  grid-template-columns: 300px 300px 300px;
+  column-gap: 50px;
 }
