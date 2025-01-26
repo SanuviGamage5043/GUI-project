@@ -7,6 +7,7 @@ const Inventory = () => {
     name: "",
     price: "",
     category: "",
+    quantity: "",
     image: null,
   });
   const [productId, setProductId] = useState("");
@@ -35,6 +36,7 @@ const Inventory = () => {
     const formData = new FormData();
     formData.append("name", product.name);
     formData.append("price", product.price);
+    formData.append("quantity", product.quantity);
     formData.append("category", product.category);
     if (product.image) formData.append("image", product.image);
 
@@ -47,7 +49,13 @@ const Inventory = () => {
         setMessage("Product created successfully!");
       }
       fetchProducts();
-      setProduct({ name: "", price: "", category: "", image: null });
+      setProduct({
+        name: "",
+        price: "",
+        category: "",
+        quantity: "",
+        image: null,
+      });
       setProductId("");
     } catch (error) {
       console.error("Error creating/updating product:", error);
@@ -98,6 +106,13 @@ const Inventory = () => {
           className="border p-2 mr-2"
         />
         <input
+          type="number"
+          placeholder="Quantity"
+          value={product.quantity}
+          onChange={(e) => setProduct({ ...product, quantity: e.target.value })}
+          className="border p-2 mr-2"
+        />
+        <input
           type="text"
           placeholder="Category"
           value={product.category}
@@ -138,6 +153,7 @@ const Inventory = () => {
             <th className="border border-gray-400 p-2">ID</th>
             <th className="border border-gray-400 p-2">Name</th>
             <th className="border border-gray-400 p-2">Price</th>
+            <th className="border border-gray-400 p-2">Quantity</th>
             <th className="border border-gray-400 p-2">Category</th>
             <th className="border border-gray-400 p-2">Image</th>
             <th className="border border-gray-400 p-2">Actions</th>
@@ -149,6 +165,7 @@ const Inventory = () => {
               <td className="border border-gray-400 p-2">{prod.id}</td>
               <td className="border border-gray-400 p-2">{prod.name}</td>
               <td className="border border-gray-400 p-2">Rs.{prod.price}</td>
+              <td className="border border-gray-400 p-2">{prod.quantity}</td>
               <td className="border border-gray-400 p-2">{prod.category}</td>
               <td className="border border-gray-400 p-2">
                 {prod.image_url && (
@@ -166,6 +183,7 @@ const Inventory = () => {
                     setProduct({
                       name: prod.name,
                       price: prod.price,
+                      quantity: prod.quantity,
                       category: prod.category,
                       image: null,
                     });

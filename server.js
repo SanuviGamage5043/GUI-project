@@ -1,7 +1,5 @@
 import express from "express";
 import cors from "cors"; 
-import Database from "better-sqlite3";
-import bodyParser from "body-parser";
 import path from "path";
 import multer from "multer";
 import fs from "fs";
@@ -39,6 +37,7 @@ const createTableQuery = `
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     name TEXT NOT NULL,
     price REAL,
+    quantity REAL,
     category TEXT,
     image_url TEXT,
     created_at TEXT DEFAULT CURRENT_TIMESTAMP
@@ -120,7 +119,7 @@ app.get('/products/:category', (req, res) => {
 
 // 3. Create a new product
 app.post('/products', upload.single('image'), (req, res) => {
-  const { name, price, category } = req.body;
+  const { name, price, category, quantity } = req.body;
   const image_url = req.file ? `/uploads/${req.file.filename}` : null;
 
   if (!name || !price) {
@@ -128,10 +127,10 @@ app.post('/products', upload.single('image'), (req, res) => {
   }
 
   const query = `
-    INSERT INTO products (name, price, category, image_url)
-    VALUES (?, ?, ?, ?)
+    INSERT INTO products (name, price, category, image_url, quantity)
+    VALUES (?, ?, ?, ?,?)
   `;
-  db.run(query, [name, price, category, image_url], function (err) {
+  db.run(query, [name, price, category, image_url, quantity], function (err) {
     if (err) {
       res.status(500).json({ error: err.message });
     } else {
@@ -143,19 +142,20 @@ app.post('/products', upload.single('image'), (req, res) => {
 // 4. Update a product
 app.put('/products/:id', upload.single('image'), (req, res) => {
   const { id } = req.params;
-  const { name, price, category } = req.body;
+  const { name, price, category, quantity } = req.body;
   const image_url = req.file ? `/uploads/${req.file.filename}` : null;
 
   const query = `
     UPDATE products
     SET name = COALESCE(?, name),
         price = COALESCE(?, price),
+        quantity = COALESCE(?, quantity),
         category = COALESCE(?, category),
         image_url = COALESCE(?, image_url)
     WHERE id = ?
   `;
 
-  db.run(query, [name, price, category, image_url, id], function (err) {
+  db.run(query, [name, price, quantity, category, image_url, id], function (err) {
     if (err) {
       res.status(500).json({ error: err.message });
     } else if (this.changes === 0) {
