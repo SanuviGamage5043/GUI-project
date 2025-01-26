@@ -10,8 +10,10 @@ export default function LoginForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (username === "sanuvi" || password === "1234") {
+    if (username === "sanuvi" && password === "1234") {
       SignIn();
+    } else if (username === "admin" && password === "admin") {
+      navigate("/inventory");
     }
     setErrorMessage("Username and password are required.");
     return;
@@ -23,7 +25,7 @@ export default function LoginForm() {
 
   const SignIn = () => {
     navigate("/home2");
-  }
+  };
 
   return (
     <form className="formContainer" onSubmit={handleSubmit}>
@@ -63,7 +65,7 @@ export default function LoginForm() {
       >
         Forgot password?
       </button>
-      <button type="submit" className="submitButton" >
+      <button type="submit" className="submitButton">
         Sign In
       </button>
       <div className="signupPrompt">Don't have an account?</div>

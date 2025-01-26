@@ -12,6 +12,7 @@ import Kids from "./pages/Kids/Kids";
 import Occasions from "./pages/Occasions/Occasions";
 import { useState } from "react";
 import Cart from "./pages/Cart/Cart";
+import Inventory from "./pages/Inventory/Inventory";
 
 
 
@@ -51,6 +52,7 @@ export default function App() {
         <Route path="/home" element = {<Home addToCart={addToCart} cart={cart}/>}/>
         <Route path="/kids" element = {<Kids addToCart={addToCart} cart={cart}/>}/>
         <Route path="/occasions" element = {<Occasions addToCart={addToCart} cart={cart}/>}/>
+        <Route path="/inventory" element = {<Inventory/>} />
       </Routes>
     </BrowserRouter>
   );
