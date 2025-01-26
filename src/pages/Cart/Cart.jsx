@@ -55,9 +55,9 @@ const handleBuyNow = () => {
         <div className="cart-items">
           {cartItems.map((item) => (
             <div key={item.id} className="cart-item">
-              <img src={item.image} alt={item.title} className="item-image" />
+              <img src={item.image_url} alt={item.name} className="item-image" />
               <div className="item-details">
-                <h3 className="item-title">{item.title}</h3>
+                <h3 className="item-title">{item.name}</h3>
                 <p className="item-price">Rs.{item.price}</p>
               </div>
               <div className="item-quantity">

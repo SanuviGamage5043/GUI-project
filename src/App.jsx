@@ -23,6 +23,7 @@ export default function App() {
 
   // Function to add an item to the cart
   const addToCart = (product) => {
+    product.quantity =1;
     setCart(prevCart => [...prevCart, product]);
     console.log(cart)
   };
