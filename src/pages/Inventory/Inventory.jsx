@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import './Inventory.css';
 
 const Inventory = () => {
   const [products, setProducts] = useState([]);
@@ -85,46 +86,46 @@ const Inventory = () => {
 
   return (
     <div className="p-8 max-w-4xl mx-auto">
-      <h1 className="text-2xl font-bold mb-4">Product Management</h1>
+      <h1 className="headingname">Product Inventory</h1>
 
-      {message && <p className="text-green-500 mb-4">{message}</p>}
+      {message && <p className="messagetext">{message}</p>}
 
       {/* Product Form */}
-      <form onSubmit={handleFormSubmit} className="mb-6">
+      <form onSubmit={handleFormSubmit} className="producttable">
         <input
           type="text"
           placeholder="Name"
           value={product.name}
           onChange={(e) => setProduct({ ...product, name: e.target.value })}
-          className="border p-2 mr-2"
+          className="nametext"
         />
         <input
           type="number"
           placeholder="Price"
           value={product.price}
           onChange={(e) => setProduct({ ...product, price: e.target.value })}
-          className="border p-2 mr-2"
+          className="pricetext"
         />
         <input
           type="number"
           placeholder="Quantity"
           value={product.quantity}
           onChange={(e) => setProduct({ ...product, quantity: e.target.value })}
-          className="border p-2 mr-2"
+          className="quantitytext"
         />
         <input
           type="text"
           placeholder="Category"
           value={product.category}
           onChange={(e) => setProduct({ ...product, category: e.target.value })}
-          className="border p-2 mr-2"
+          className="categorytext"
         />
         <input
           type="file"
           onChange={(e) => setProduct({ ...product, image: e.target.files[0] })}
-          className="border p-2 mr-2"
+          className="imagetext"
         />
-        <button type="submit" className="bg-blue-500 text-white px-4 py-2">
+        <button type="submit" className="productbutton">
           {productId ? "Update" : "Create"} Product
         </button>
       </form>

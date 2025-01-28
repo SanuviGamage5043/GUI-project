@@ -1,0 +1,49 @@
+.messagetext {
+    font-size: 30px;
+    color: black;
+    font-weight: bold;
+    margin-left: 100px;
+
+}
+
+.headingname {
+    font-size: 60px;
+    font-weight: bold;
+    justify-self: center;
+}
+
+.producttable {
+    display: flex;
+    flex-direction: row;
+    margin-left: 100px;
+    width: 2000px;
+}
+
+.nametext {
+    font-size: 25px;
+    width: 250px;
+}
+
+.pricetext {
+    font-size: 25px;
+    width: 250px;
+}
+
+.quantitytext{
+    font-size: 25px;
+    width: 250px;
+}
+
+.categorytext{
+    font-size: 25px;
+    width: 250px;
+}
+
+.imagetext {
+    font-size: 20px;
+    margin-right: 100px;
+}
+
+.productbutton{
+    font-size: 20px;
+}
