@@ -30,7 +30,7 @@ export default function GiftBox({ addToCart, cart }) {
    // Fetch all products
    const fetchProducts = async () => {
     try {
-      const response = await axios.get("http://localhost:3000/products/GiftBaskets&Boxes");
+      const response = await axios.get("http://localhost:3000/products/Boxes");
       setProducts(response.data);
       console.log(products)
     } catch (error) {
