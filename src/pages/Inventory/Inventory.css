@@ -1,3 +1,17 @@
+.allcontent {
+    height: 100vh; /* Ensures full viewport height */
+    background-image: url('/images/wall3.png');
+    background-size: cover; /* Covers the entire container */
+    background-position: center; /* Centers the background */
+    background-repeat: no-repeat; /* Prevents tiling */
+    overflow: hidden;
+
+   
+    
+    
+
+}
+
 .messagetext {
     font-size: 30px;
     color: black;
@@ -17,33 +31,109 @@
     flex-direction: row;
     margin-left: 100px;
     width: 2000px;
+    margin-bottom: 50px;
 }
 
 .nametext {
     font-size: 25px;
     width: 250px;
+    height: 35px;
 }
 
 .pricetext {
     font-size: 25px;
     width: 250px;
+    height: 35px;
 }
 
 .quantitytext{
     font-size: 25px;
     width: 250px;
+    height: 35px;
 }
 
 .categorytext{
     font-size: 25px;
     width: 250px;
+    height: 35px;
 }
 
 .imagetext {
     font-size: 20px;
-    margin-right: 100px;
+    margin-right: 30px;
+    height: 35px;
+    width: 300px;
 }
 
 .productbutton{
+    height: 44px;
     font-size: 20px;
+    width: 200px;
+}
+
+.searchcontent{
+    display: flex;
+    flex-direction: row;
+    height: 40px;
+    margin-bottom: 50px;
+}
+.searchtext{
+    font-size: 20px;
+    margin-left: 100px;
+    height: 40px;
+    width: 300px;
+}
+
+.searchbutton {
+    height: 44px;
+    font-size: 20px;
+    width: 100px;
+}
+
+.tablecontent {
+    width: 2300px;
+    border-collapse: collapse;
+    margin: 70px;
+    align-items: center;
+    justify-items: center;
+
+  }
+  
+.tableheading {
+    background-color: #f2f2f2;
+    border: 1px solid #ddd;
+    padding: 8px;
+    font-size: 27px;
+  }
+  
+.items {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+    font-size: 25px;
+
+  }
+  
+.productimage {
+    max-width: 150px;
+    max-height: 150px;
+    align-self: center;
+  }
+
+
+
+  .editbutton{
+    margin-left: 50px;
+    width: 100px;
+    height: 30px;
+    font-size: 22px;
+    margin-right: 20px;
+  }
+
+.deletebutton{
+    
+    width: 100px;
+    height: 30px;
+    font-size: 22px;
+
 }

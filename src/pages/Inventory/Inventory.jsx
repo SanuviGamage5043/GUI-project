@@ -85,7 +85,7 @@ const Inventory = () => {
   };
 
   return (
-    <div className="p-8 max-w-4xl mx-auto">
+    <div className="allcontent">
       <h1 className="headingname">Product Inventory</h1>
 
       {message && <p className="messagetext">{message}</p>}
@@ -131,53 +131,53 @@ const Inventory = () => {
       </form>
 
       {/* Fetch by Category */}
-      <div className="mb-6">
+      <div className="searchcontent">
         <input
           type="text"
           placeholder="Search by category"
           value={category}
           onChange={(e) => setCategory(e.target.value)}
-          className="border p-2 mr-2"
+          className="searchtext"
         />
         <button
           onClick={fetchByCategory}
-          className="bg-gray-500 text-white px-4 py-2"
+          className="searchbutton"
         >
           Search
         </button>
       </div>
 
       {/* Products List */}
-      <table className="table-auto w-full border-collapse border border-gray-400">
-        <thead>
+      <table className="tablecontent">
+        
           <tr>
-            <th className="border border-gray-400 p-2">ID</th>
-            <th className="border border-gray-400 p-2">Name</th>
-            <th className="border border-gray-400 p-2">Price</th>
-            <th className="border border-gray-400 p-2">Quantity</th>
-            <th className="border border-gray-400 p-2">Category</th>
-            <th className="border border-gray-400 p-2">Image</th>
-            <th className="border border-gray-400 p-2">Actions</th>
+            <th className="tableheading">ID</th>
+            <th className="tableheading">Name</th>
+            <th className="tableheading">Price</th>
+            <th className="tableheading">Quantity</th>
+            <th className="tableheading">Category</th>
+            <th className="tableheading">Image</th>
+            {/* <th className="tableheading">Actions</th> */}
           </tr>
-        </thead>
-        <tbody>
+        
+        
           {products.map((prod) => (
             <tr key={prod.id}>
-              <td className="border border-gray-400 p-2">{prod.id}</td>
-              <td className="border border-gray-400 p-2">{prod.name}</td>
-              <td className="border border-gray-400 p-2">Rs.{prod.price}</td>
-              <td className="border border-gray-400 p-2">{prod.quantity}</td>
-              <td className="border border-gray-400 p-2">{prod.category}</td>
-              <td className="border border-gray-400 p-2">
+              <td className="items">{prod.id}</td>
+              <td className="items">{prod.name}</td>
+              <td className="items">Rs.{prod.price}</td>
+              <td className="items">{prod.quantity}</td>
+              <td className="items">{prod.category}</td>
+              <td className="items">
                 {prod.image_url && (
                   <img
                     src={`http://localhost:3000${prod.image_url}`}
                     alt={prod.name}
-                    className="h-12"
+                    className="productimage"
                   />
                 )}
               </td>
-              <td className="border border-gray-400 p-2">
+              <td className="actionbuttons">
                 <button
                   onClick={() => {
                     setProductId(prod.id);
@@ -189,20 +189,20 @@ const Inventory = () => {
                       image: null,
                     });
                   }}
-                  className="bg-yellow-500 text-white px-2 py-1 mr-2"
+                  className="editbutton"
                 >
                   Edit
                 </button>
                 <button
                   onClick={() => deleteProduct(prod.id)}
-                  className="bg-red-500 text-white px-2 py-1"
+                  className="deletebutton"
                 >
                   Delete
                 </button>
               </td>
             </tr>
           ))}
-        </tbody>
+        
       </table>
     </div>
   );
