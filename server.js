@@ -36,7 +36,7 @@ const createTableQuery = `
   CREATE TABLE IF NOT EXISTS products (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     name TEXT NOT NULL,
-    price REAL,
+    price DECIMAL(10,2),
     quantity REAL,
     category TEXT,
     image_url TEXT,

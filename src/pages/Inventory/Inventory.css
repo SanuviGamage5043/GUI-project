@@ -4,7 +4,7 @@
     background-size: cover; /* Covers the entire container */
     background-position: center; /* Centers the background */
     background-repeat: no-repeat; /* Prevents tiling */
-    overflow: hidden;
+    overflow:scroll;
 
    
     

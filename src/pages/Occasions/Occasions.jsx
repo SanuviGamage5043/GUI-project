@@ -80,19 +80,7 @@ export default function Occasions({ addToCart, cart }) {
         </div>
       </section>
 
-      {/* <section className="products-section">
-        <h2 className="section-title">Wedding</h2>
-        <div className="products-grid">
-          {weddingProducts.map((product) => (
-            <div key={product.id} className="product-item">
-              <ProductCard 
-              product={product} 
-              addToCart={addToCart} 
-              />
-            </div>
-          ))}
-        </div>
-      </section> */}
+
     </main>
   );
 }
