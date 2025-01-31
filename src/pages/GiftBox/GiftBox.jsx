@@ -47,7 +47,7 @@ export default function GiftBox({ addToCart, cart }) {
       <Header cart={cart} />
       <MenuBar />
       <section className="products-section">
-        <h2 className="section-title">Gift Baskets & Boxes</h2>
+        <h2 className="section-title">Gift Boxes</h2>
         <div className="products-grid">
           {products.map((product) => (
             <div key={product.id} className="product-item">

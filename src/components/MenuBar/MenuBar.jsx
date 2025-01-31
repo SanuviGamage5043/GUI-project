@@ -12,9 +12,7 @@ export default function MenuBar() {
         <li className="listcomp">
         <Link className="listcomp-link" to="/flowers"> Flowers</Link>
         </li>
-        <li className="listcomp">
-        <Link className="listcomp-link" to="/giftbox"> Gift Baksets & Boxes</Link>
-        </li>
+        
         <li className="listcomp">
           <Link className="listcomp-link" to="/choco"> Chocolate</Link>
         </li>
@@ -29,6 +27,9 @@ export default function MenuBar() {
         </li>
         <li className="listcomp">
         <Link className="listcomp-link" to="/home"> Home</Link>
+        </li>
+        <li className="listcomp">
+        <Link className="listcomp-link" to="/giftbox"> Boxes</Link>
         </li>
       </ul>
     </div>

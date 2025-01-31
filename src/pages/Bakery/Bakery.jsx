@@ -55,22 +55,20 @@ export default function Bakery({addToCart, cart}) {
   return (
     <main className="main-container">
       <Header cart={cart} />
-      <div className="menu">
-        <MenuBar />
-      </div>
+      <MenuBar />
       <section className="products-section">
-        <h2 className="section-title">Bakery</h2>
-        <div className="allproducts">
-          {products.map((product) => (
-            <div key={product.id} className="product-item">
-              <ProductCard
-                product = {product}
-                addToCart={addToCart}
-              />
-            </div>
-          ))}
-        </div>
-      </section>
+              <h2 className="section-title">Bakery</h2>
+              <div className="products-grid">
+                {products.map((product) => (
+                  <div key={product.id} className="product-item">
+                    <ProductCard 
+                    product={product} 
+                    addToCart={addToCart} 
+                    />
+                  </div>
+                ))}
+              </div>
+            </section>
     </main>
   );
 }

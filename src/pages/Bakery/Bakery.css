@@ -1,18 +1,10 @@
 .main-container {
   display: flex;
   flex-direction: column;
-  background-color: #f2a7e6;
   padding: 20px;
-  min-height: 100vh;
+  height: 100vh; /* Ensures the container takes the full height of the viewport */
   background-image: url('/images/wall3.png');
-  background-size: cover; /* Ensures the image covers the entire container */
-  background-position: center; /* Centers the background image */
-  background-repeat: no-repeat; 
   
-}
-
-.menu {
-  margin-bottom: 20px;
 }
 
 .products-section {
@@ -26,25 +18,20 @@
   font-size: 60px;
   font-weight: bold;
   margin-bottom: 20px;
-  
   justify-self: left;
-  
   margin: 50px;
 }
 
-
+.products-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  column-gap: 40px; /* Adds horizontal spacing */
+  row-gap: 20px; /* Keeps the vertical spacing smaller */
+}
 
 
 .product-item {
-  display: inline-block; /* Ensures product cards are inline horizontally */
-  width: 300px; /* Adjust width as per your design */
-  margin: 10px; /* Add spacing between product cards */
-  vertical-align: top;
-  
-}
-
-.allproducts {
-  display: grid;
-  grid-template-columns: 300px 300px 300px;
-  column-gap: 50px;
+  flex: 1 1 calc(33.33% - 20px); /* Makes the items responsive */
+  max-width: 200px; /* Ensures each card has a fixed width */
 }
