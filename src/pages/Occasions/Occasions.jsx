@@ -67,7 +67,7 @@ export default function Occasions({ addToCart, cart }) {
       <Header cart={cart} />
       <MenuBar />
       <section className="products-section">
-        <h2 className="section-title">Birthday</h2>
+        <h2 className="section-title">Occasions</h2>
         <div className="products-grid">
           {products.map((product) => (
             <div key={product.id} className="product-item">
