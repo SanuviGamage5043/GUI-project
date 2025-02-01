@@ -13,6 +13,7 @@ import Occasions from "./pages/Occasions/Occasions";
 import { useState } from "react";
 import Cart from "./pages/Cart/Cart";
 import Inventory from "./pages/Inventory/Inventory";
+import Orders from "./pages/Orders/Orders";
 
 
 
@@ -21,11 +22,21 @@ export default function App() {
   // Cart state will hold the list of products in the cart
   const [cart, setCart] = useState([]);
 
+  //Orders
+  const [orders, setOrders] = useState([]);
+
+
   // Function to add an item to the cart
   const addToCart = (product) => {
     product.quantity =1;
     setCart(prevCart => [...prevCart, product]);
     console.log(cart)
+  };
+
+  // Function to add an item to the orders
+  const addToOrders = () => {
+    setOrders((prevOrders) => [...prevOrders, ...cart]);
+    setCart([]); // Clear cart after purchase
   };
 
   // Function to remove an item from the cart by its id
@@ -45,7 +56,7 @@ export default function App() {
         <Route path="/signup" element={<SignUp />} />
         <Route path="/home2" element={<Home2/>}/>
         <Route path="/bakery" element = {<Bakery addToCart={addToCart} cart={cart}/>}/>
-        <Route path="/cart" element = {<Cart cart={cart} addToCart={addToCart} removeFromCart={removeFromCart} getCartCount={getCartCount}/>}/>
+        <Route path="/cart" element={<Cart cart={cart} removeFromCart={removeFromCart} getCartCount={getCartCount} addToOrders={addToOrders} />} />
         <Route path="/choco" element = {<Choco addToCart={addToCart} cart={cart}/>}/>
         <Route path="/flowers" element = {<Flowers addToCart={addToCart} cart={cart}/>}/>
         <Route path="/fruits" element = {<Fruits addToCart={addToCart} cart={cart}/>}/>
@@ -54,6 +65,7 @@ export default function App() {
         <Route path="/kids" element = {<Kids addToCart={addToCart} cart={cart}/>}/>
         <Route path="/occasions" element = {<Occasions addToCart={addToCart} cart={cart}/>}/>
         <Route path="/inventory" element = {<Inventory/>} />
+        <Route path="/orders" element={<Orders orders={orders} />} />
       </Routes>
     </BrowserRouter>
   );

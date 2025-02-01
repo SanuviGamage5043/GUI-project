@@ -13,7 +13,7 @@ const navigationItems = [
   },
 ];
 
-export default function Header({cart}) {
+export default function Header({cart, orders}) {
     const navigate = useNavigate();
   
   const cartCount = cart.length;  // Example, you can replace it with dynamic count
@@ -21,8 +21,8 @@ export default function Header({cart}) {
   return (
     <header className="header">
       <div className="logo-container">
-        <div>
-          <h1 className="brand-name">Blossom Bliss</h1>
+        <div className="companyname"onClick={()=> navigate("/home2")}>
+          <h1 className="brand-name" >Blossom Bliss</h1>
           <p className="tagline">- Flower & Gift Delivery -</p>
         </div>
         <div className="search-container">
@@ -53,7 +53,7 @@ export default function Header({cart}) {
           </div>
           <div className="label">{navigationItems[0].label}</div>
         </div>
-        <div className="navItem">
+        <div className="navItem" onClick={()=> navigate("/orders")}>
           <div className="icon-container">
             <img
               loading="lazy"

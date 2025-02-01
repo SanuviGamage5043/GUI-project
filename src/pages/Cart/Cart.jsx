@@ -2,18 +2,20 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import './Cart.css';
 
-const Cart = ({cart, addToCart, getCartCount}) => {
+
+const Cart = ({cart, addToCart, getCartCount, addToOrders}) => {
 
 const navigate = useNavigate();
 
 const handleBuyNow = () => {
-   // Save cart items to orders
-  alert(
-    `You have purchased the following products:\n${cartItems
-      .map((item) => `${item.title} (x${item.quantity})`)
-      .join(", ")}`
-  );
-   // Clear the cart after purchase
+  if (cart.length === 0) {
+    alert("Your cart is empty!");
+    return;
+  }
+
+  addToOrders(); // Move cart items to orders
+  alert("Your purchase was successful!");
+  navigate("/orders"); // Redirect to Orders page
 };
 
   const [cartItems, setCartItems] = useState(cart);
@@ -48,7 +50,7 @@ const handleBuyNow = () => {
 
   return (
     <div className="cart-container">
-      <h2>Your Cart</h2>
+      <h2>My Cart</h2>
       
       {/* Product List */}
       {cartItems.length > 0 ? (
