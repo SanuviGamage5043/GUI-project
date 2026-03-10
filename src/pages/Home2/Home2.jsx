@@ -16,7 +16,7 @@ export default function Home2( cart ) {
 
       <img src="/images/gift.png"  className="gift-image"/>
       
-      <img src="/images/voucher.png" className="voucher-item"/>
+      
       
       </div>
       

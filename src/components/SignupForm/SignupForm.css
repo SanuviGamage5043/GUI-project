@@ -1,56 +1,65 @@
-.form-container {
-  border-radius: 8px;
-  background-color: rgb(255, 252, 255);
-  display: flex;
-  min-width: 320px;
-  margin-top: 67px;
-  min-height: 597px;
-  width: 535px;
+/* Form Card */
+.formContainer {
+  width: 420px;
   max-width: 100%;
-  flex-direction: column;
-  padding: 24px;
-  border: 1px solid rgba(217, 217, 217, 1);
-}
-
-.input-group {
+  padding: 32px;
+  border-radius: 16px;
+  background: #ffffff;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
   display: flex;
-  width: 90%;
   flex-direction: column;
-  margin-bottom: 24px;
 }
 
-.label {
-  color: black;
-  font-size: 32px;
+/* Input Groups */
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
 }
 
+/* Labels */
+.label2 {
+  font-size: 25px;
+  margin-bottom: 6px;
+  color: #333;
+}
+
+/* Inputs */
 .input {
-  border-radius: 8px;
-  background-color: rgba(255, 255, 255, 1);
-  margin-top: 8px;
-  width: 100%;
-  padding: 12px 16px;
-  border: 1px solid rgba(217, 217, 217, 1);
-  font-size: 20px;
-}
-
-.signup-button {
+  padding: 12px 14px;
+  font-size: 16px;
   border-radius: 10px;
-  background-color: var(--Colors-Blue, #007aff);
-  align-self: center;
-  color: #fff;
-  padding: 12px;
-  width: 140px;
-  text-align: center;
-  margin-top: 50px;
-  border: none;
-  cursor: pointer;
-  height: 50px;
-  font-size: 20px;
+  border: 1px solid #ccc;
+  transition: border 0.3s, box-shadow 0.3s;
 }
 
-@media (max-width: 991px) {
-  .form-container {
-    margin-top: 40px;
+.input:focus {
+  outline: none;
+  border-color: #007aff;
+  box-shadow: 0 0 0 3px rgba(0, 122, 255, 0.15);
+}
+
+/* Submit Button */
+.signupButton {
+  background: linear-gradient(135deg, #ff6fae, #ff8ccf);
+  border: none;
+  color: #fff;
+  font-size: 18px;
+  padding: 12px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  margin-top: 20px;
+}
+
+.signupButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(255, 111, 174, 0.4);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .formContainer {
+    padding: 24px;
   }
 }

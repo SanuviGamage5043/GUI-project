@@ -1,39 +1,30 @@
-.container {
+/* Container for the page */
+.signupContent {
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  overflow: hidden;
+  justify-content: center;
   align-items: center;
-  padding: 50px;
-  background-image: url("D:/3rd sem/EC3404 GUI/final gui project/new app/gui1-app/images/wall.jpg");
-  background-repeat: no-repeat;
+  background-image: url('../../../images/gift1.jpg'); 
   background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  filter: brightness(0.9);
 }
 
-.content {
-  display: flex;
-  align-self: flex-start;
-  align-content: space-between;
-  width: 100%;
+/* Title */
+.signupTitle {
+  font-size: 48px;
+  font-family: "Times New Roman", serif;
+  color: #333;
+  margin-bottom: 30px;
+  text-align: center;
 }
 
-.title {
-  color: rgba(0, 0, 0, 1);
-  font-size: 60px;
-  font-weight: 400;
-  align-self: center;
-  align-items: center;
-  margin-top: 95px;
-  font-family: Times New Roman, -apple-system, Roboto, Helvetica, sans-serif;
-}
-
-@media (max-width: 991px) {
-  .container {
-    padding: 0 20px 100px;
-  }
-  .content {
-    max-width: 100%;
-  }
-  .title {
-    margin-top: 40px;
+/* Responsive */
+@media (max-width: 768px) {
+  .signupTitle {
+    font-size: 32px;
   }
 }

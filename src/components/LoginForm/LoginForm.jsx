@@ -10,13 +10,16 @@ export default function LoginForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
     if (username === "sanuvi" && password === "1234") {
       SignIn();
+      return;
     } else if (username === "admin" && password === "admin") {
       navigate("/inventory");
+      return;
     }
-    setErrorMessage("Username and password are required.");
-    return;
+
+    setErrorMessage("Invalid username or password.");
   };
 
   const SignUp = () => {
@@ -28,36 +31,33 @@ export default function LoginForm() {
   };
 
   return (
-    <form className="formContainer" onSubmit={handleSubmit}>
+    <form className="formContainer1" onSubmit={handleSubmit}>
+      <p className="formTitle">Sign In</p>
+
       {errorMessage && <p className="errorMessage">{errorMessage}</p>}
+
       <div className="inputGroup">
-        <label htmlFor="username" className="label">
-          Username
-        </label>
+        <label className="label1">Username</label>
         <input
-          id="username"
           type="text"
           className="input"
           value={username}
           onChange={(e) => setUsername(e.target.value)}
           required
-          aria-required="true"
         />
       </div>
+
       <div className="inputGroup">
-        <label htmlFor="password" className="label">
-          Password
-        </label>
+        <label className="label1">Password</label>
         <input
-          id="password"
           type="password"
           className="input"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           required
-          aria-required="true"
         />
       </div>
+
       <button
         type="button"
         className="forgotPassword"
@@ -65,13 +65,17 @@ export default function LoginForm() {
       >
         Forgot password?
       </button>
+
       <button type="submit" className="submitButton">
         Sign In
       </button>
-      <div className="signupPrompt">Don't have an account?</div>
-      <button type="button" className="signupLink" onClick={SignUp}>
-        Sign Up
-      </button>
+
+      <div className="signupPrompt">
+        Don’t have an account?
+        <span className="signupLink" onClick={SignUp}>
+          {" "}Sign Up
+        </span>
+      </div>
     </form>
   );
 }
