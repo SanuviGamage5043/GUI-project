@@ -13,16 +13,24 @@ const navigationItems = [
   },
 ];
 
-export default function Header({cart, orders}) {
-    const navigate = useNavigate();
-  
-  const cartCount = cart.length;  // Example, you can replace it with dynamic count
+export default function Header({ cart, orders }) {
+  const navigate = useNavigate();
+  const cartCount = cart.length;
+
+  // Logout handler
+  const handleLogout = () => {
+    // Clear auth info if stored in localStorage/session
+    localStorage.clear();
+    sessionStorage.clear();
+    // Redirect to login page
+    navigate("/");
+  };
 
   return (
     <header className="header">
       <div className="logo-container">
-        <div className="companyname"onClick={()=> navigate("/home2")}>
-          <h1 className="brand-name" >Blossom Bliss</h1>
+        <div className="companyname" onClick={() => navigate("/home2")}>
+          <h1 className="brand-name">Blossom Bliss</h1>
           <p className="tagline">- Flower & Gift Delivery -</p>
         </div>
         <div className="search-container">
@@ -40,20 +48,24 @@ export default function Header({cart, orders}) {
           />
         </div>
       </div>
+
       <nav className="navigation-container">
-        <div className="navItem" onClick={()=> navigate("/cart")}>
-          <div className="icon-container" >
+        {/* Cart */}
+        <div className="navItem" onClick={() => navigate("/cart")}>
+          <div className="icon-container">
             <img
               loading="lazy"
               src={navigationItems[0].icon}
               className="icon"
               alt="Cart Icon"
             />
-             {cartCount > 0 && <div className="badge">{cartCount}</div>} 
+            {cartCount > 0 && <div className="badge">{cartCount}</div>}
           </div>
           <div className="label">{navigationItems[0].label}</div>
         </div>
-        <div className="navItem" onClick={()=> navigate("/orders")}>
+
+        {/* Orders */}
+        <div className="navItem" onClick={() => navigate("/orders")}>
           <div className="icon-container">
             <img
               loading="lazy"
@@ -63,6 +75,11 @@ export default function Header({cart, orders}) {
             />
           </div>
           <div className="label">{navigationItems[1].label}</div>
+        </div>
+
+        {/* Logout */}
+        <div className="navItem logout-button" onClick={handleLogout}>
+          <div className="label">Logout</div>
         </div>
       </nav>
     </header>

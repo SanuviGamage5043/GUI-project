@@ -7,8 +7,6 @@
   gap: 20px;
   flex-wrap: wrap;
   background: transparent;
- 
-  
 }
 
 /* Logo Section */
@@ -54,7 +52,6 @@
   border: 1px solid #ccc;
   border-radius: 4px;
   height: 60px;
-  
 }
 
 .search-input:focus {
@@ -72,11 +69,12 @@
 /* Navigation Section */
 .navigation-container {
   display: flex;
-  justify-content: center;
+  align-items: center;
   gap: 20px;
   font-size: 18px;
   font-weight: 600;
   color: #495057;
+  margin-left: auto; /* Push nav items to the right */
 }
 
 .navigation-container a {
@@ -94,6 +92,7 @@
   flex-direction: column;
   align-items: center;
   cursor: pointer;
+  position: relative;
 }
 
 .icon-container {
@@ -127,6 +126,24 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-.companyname{
+.companyname {
   cursor: pointer;
+}
+
+/* Logout Button */
+.logout-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: black; /* red */
+  font-weight: bold;
+  font-size: 32px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: background 0.2s;
+}
+
+.logout-button:hover {
+  background-color: rgba(244, 67, 54, 0.1);
 }
